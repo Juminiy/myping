@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Juminiy/myping/cmd/ping_option"
 	myping_config "github.com/Juminiy/myping/config"
+	"github.com/Juminiy/myping/ping_option"
 	"github.com/Juminiy/myping/utils"
 
 	"github.com/spf13/cobra"

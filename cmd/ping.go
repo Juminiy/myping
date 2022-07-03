@@ -11,6 +11,7 @@ import (
 	model "github.com/Juminiy/myping/model"
 	myping_utils "github.com/Juminiy/myping/utils"
 
+	"github.com/Juminiy/myping/ping_option"
 	"github.com/go-ping/ping"
 	"github.com/spf13/cobra"
 )
@@ -49,10 +50,11 @@ var pingCmd = &cobra.Command{
 
 		// start ping
 		start_ping := time.Now()
+		ping_option.WorkStart = start_ping.Unix()
 		// IPV6 function
 		if err = pinger.Run(); err != nil {
 			panic(err)
-		} 
+		}
 		totalTime := time.Since(start_ping).Milliseconds()
 		// end ping
 		// after ping, we start the spinner,but not show in command line
