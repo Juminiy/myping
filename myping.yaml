@@ -1,0 +1,26 @@
+app:
+  name: myping
+  version: "v1.0-stable"
+  author:
+    name: Chisato
+    original: true
+    github: https://github.com/Juminiy
+  gitRepo: 
+    url: https://github.com/Juminiy/myping
+    LICENSE: " Apache License 2.0 "
+  createdTime: "2022-06-30"
+  toolChain:
+    - shell
+    - golang
+    - spf13/cobra
+    - spf13/viper
+    - apache/echarts
+    - ICMP 
+    - HTTP RESTful
+    - JavaScript 
+    - Axios
+db:
+  redis:
+    addr: "127.0.0.1:6379"
+    password: "chisato_redis"
+    db: 0 
