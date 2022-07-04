@@ -9,7 +9,7 @@ import (
 
 const (
 	PING_RETRY_MIN_TIME     = 5
-	PING_RETRY_DEFAULT_TIME = 60 
+	PING_RETRY_DEFAULT_TIME = 60000
 )
 
 var (
@@ -20,7 +20,7 @@ func PingRetry() {
 
 	for {
 		if (time.Now().Unix() - WorkStart) > PING_RETRY_DEFAULT_TIME {
-			fmt.Println("You should type Ctrl+C to stop the program, because the host don't reply!")
+			fmt.Println("We are pinging again and again, please wait ... ... ")
 		}
 	}
 
