@@ -70,6 +70,5 @@ func init() {
 	pingCmd.Flags().Int64VarP(&utils.DelayTime, "spinnerTime", "t", utils.DEFAULT_DELAY_TIME, "waiting ping spinner delay")
 	pingCmd.Flags().StringVarP(&utils.TypeSpinner, "spinnerLogo", "l", utils.MazeSpinner, "waiting ping spinner logo")
 	pingCmd.Flags().BoolVarP(&ping_option.ShowEachTime, "showEachTime", "s", ping_option.PING_SHOW_EACH_TIME, "show the every packet details")
-	pingCmd.Flags().BoolVarP(&ping_option.IPv6, "ipv6", "6", ping_option.PING_DEFAULT_IPV6, "whether use ipv6 ICMP Packet")
-
+	pingCmd.Flags().StringVarP(&ping_option.PingIpVersion, "IPVersion", "v", ping_option.PING_CMD_IP_VERSION_4, "choose the ip version")
 }

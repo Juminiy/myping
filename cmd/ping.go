@@ -48,6 +48,15 @@ var pingCmd = &cobra.Command{
 		}
 		pinger.Count = PingCount
 
+		if ping_option.PingIpVersion == ping_option.PING_CMD_IP_VERSION_4 {
+			pinger.SetNetwork(ping_option.PING_CMD_IP_VERSION_4)
+		} else {
+			pinger.SetNetwork(ping_option.PING_CMD_IP_VERSION_6)
+		}
+		
+		
+		
+
 		// start ping
 		start_ping := time.Now()
 		ping_option.WorkStart = start_ping.Unix()
@@ -55,6 +64,9 @@ var pingCmd = &cobra.Command{
 		if err = pinger.Run(); err != nil {
 			panic(err)
 		}
+		
+
+
 		totalTime := time.Since(start_ping).Milliseconds()
 		// end ping
 		// after ping, we start the spinner,but not show in command line

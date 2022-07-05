@@ -9,13 +9,12 @@ import (
 
 	"github.com/Juminiy/myping/cmd"
 	"github.com/Juminiy/myping/utils"
-	"github.com/Juminiy/myping/ping_option"
 )
 
 func main() {
 
-	// Retry
-	go ping_option.PingRetry()
+	// // Retry
+	// go ping_option.PingRetry()
 	// Spinner
 	go utils.Spinner(time.Duration(utils.DelayTime), utils.TypeSpinner)
 	// CLI

@@ -1,16 +1,10 @@
 #!/bin/bash
 
 # Unix Like system installation, MacOS,Linux distros:Ubuntu,ArchLinux,CentOS...
-go version
+brew install go 
+yum -u install go  
+sudo apt install go 
 
-# judge os 
-if [ -ge ] do 
-    sudo apt install go  
-done 
-
-git clone https://github.com/Juminiy/myping
-cd myping 
-go mod tidy
-go install 
+go install github.com/Juminiy/myping@v1.0.5 
 
 myping info 
